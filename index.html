@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 網頁標題應為首頁相關 -->
+    <title>[傑丞建築機構] | 專業建築設計與規劃</title> <!-- 標題優化 -->
+    <!-- 引入 Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入客製化 CSS 檔案 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- UI/UX 優化：引入 Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800 antialiased font-sans">
+
+    <!-- 導覽列 (Navbar) -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-gray-900 hover:text-gray-700 transition duration-300">
+                [傑丞建築機構]
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <!-- 優化：當前頁面高亮顯示 -->
+                <a href="index.html" class="text-gray-900 font-semibold border-b-2 border-gray-900 transition duration-300">首頁</a>
+                <a href="about.html" class="text-gray-600 hover:text-gray-900 transition duration-300">關於我</a>
+                <a href="portfolio.html" class="text-gray-600 hover:text-gray-900 transition duration-300">作品集</a>
+                <a href="contact.html" class="text-gray-600 hover:text-gray-900 transition duration-300">聯絡方式</a>
+            </div>
+            <!-- ... 手機版選單 ... -->
+        </nav>
+        <!-- ... 手機版導覽選單 ... -->
+    </header>
+
+   <!-- 區塊1: 首頁 (Hero Section) -->
+    <section id="home" class="hero-section h-screen flex items-center justify-center text-white text-center">
+        <div class="space-y-6 px-6 relative z-10 hero-content">
+            <!-- UI 優化：標題使用 monospace 字體以營造精確感 -->
+            <!-- 調整字體大小，增加視覺衝擊力 -->
+            <h1 class="font-monospace text-5xl md:text-8xl font-thin tracking-wider uppercase animate-fadein-delay-1">
+                [傑丞建築機構]
+            </h1>
+            <p class="text-xl md:text-3xl font-light animate-fadein-delay-2">
+
+                構築永續未來，定義空間美學
+            </p>
+            <!-- UI 優化：按鈕設計調整，使用客製化 class -->
+            <a href="portfolio.html"
+   class="inline-block px-8 py-3 mt-8 text-sm font-semibold border-2 border-white text-white hero-button animate-fadein-delay-3">
+   查看作品集
+</a>
+
+        </div>
+    </section>
+
+    <!-- 區塊2: 全案管理介紹 (Featured Projects) - 新增區塊，使首頁內容更豐富 -->
+    <section id="featured-projects" class="container mx-auto px-6 py-20 lg:py-24 animated-fadein">
+        <h2 class="font-monospace text-4xl font-light text-center mb-4 text-gray-900">全案管理介紹</h2>
+        <div class="h-1 w-16 bg-gray-900 mb-12 mx-auto"></div> <!-- 分隔線 -->
+
+        <!-- 作品網格排列 (3 欄式) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- 作品卡片 1：將圖片和文字包裹在 <a> 連結中 -->
+            <div class="project-card bg-white rounded shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <a href="project-detail-1.html">
+                    <div class="project-image-wrapper"> <!-- 新增 wrapper 以應用 hover 效果 -->
+                        <img src="image/投影片1.jpg" alt="作品1圖片" class="project-image w-full h-60 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-monospace text-xl font-semibold mb-2 text-gray-800">開放建築</h3>
+                        <p class="text-sm text-gray-600">利用自然採光與極簡線條，打造開放式居住空間。</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 作品卡片 2：將圖片和文字包裹在 <a> 連結中 -->
+            <div class="project-card bg-white rounded shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <a href="project-detail-2.html">
+                    <div class="project-image-wrapper">
+                        <img src="image/投影片2.jpg" alt="作品2圖片" class="project-image w-full h-60 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-monospace text-xl font-semibold mb-2 text-gray-800">當層配管</h3>
+                        <p class="text-sm text-gray-600">結合工業風格與綠色植物，提升工作效率與舒適度。</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 作品卡片 3：將圖片和文字包裹在 <a> 連結中 -->
+            <div class="project-card bg-white rounded shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                <a href="project-detail-3.html">
+                    <div class="project-image-wrapper">
+                        <img src="image/投影片3.jpg" alt="作品3圖片" class="project-image w-full h-60 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-monospace text-xl font-semibold mb-2 text-gray-800">複層樓板</h3>
+                        <p class="text-sm text-gray-600">強調人與自然互動，設計融入周圍環境的公共空間。</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- 導向完整作品集頁面的 CTA 按鈕 -->
+        <div class="text-center mt-12">
+            <a href="portfolio.html" class="inline-block px-8 py-3 text-sm font-semibold border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition duration-300 cta-button">
+                查看所有作品
+            </a>
+        </div>
+    </section>
+
+    <!-- 頁尾 (Footer) -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center text-sm">
+            &copy; 2025 [傑丞建築機構]. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript 程式碼 -->
+   <script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+    }
+  });
+});
+
+document.querySelectorAll('.animated-fadein').forEach(el => {
+  observer.observe(el);
+});
+</script>
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.animated-fadein').forEach(el => {
+    el.classList.add('is-animating');
+    observer.observe(el);
+  });
+});
+</script>
+
+</html>

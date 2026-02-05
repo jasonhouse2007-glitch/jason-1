@@ -1,0 +1,139 @@
+/* ------------------------------------------- */
+/* 客製化樣式表 for 建築作品集 - 修正版（穩定） */
+/* ------------------------------------------- */
+
+/* ===============================
+   基本字體設定
+   =============================== */
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.6;
+    /* 🔴 關鍵修正：避開 fixed navbar */
+    padding-top: 6rem; /* 約等於 pt-24 */
+}
+
+h1, h2, h3, h4, .font-monospace {
+    font-family: 'Source Code Pro', monospace;
+}
+
+/* ===============================
+   顏色變數
+   =============================== */
+:root {
+    --primary-color: #0d1a26;
+    --accent-color: #a0a0a0;
+}
+
+/* ===============================
+   Hero Section
+   =============================== */
+.hero-section {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url('image/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ===============================
+   按鈕樣式
+   =============================== */
+.hero-button {
+    border-color: #ffffff;
+    background-color: transparent;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
+}
+.hero-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.cta-button {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
+}
+.cta-button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* ===============================
+   🔥 關鍵修正：動畫顯示邏輯
+   =============================== */
+
+/*
+  ❌ 舊問題：
+  .animated-fadein 預設 opacity: 0
+  但你沒有 JS 加 is-visible
+  → 整頁永遠透明
+
+  ✅ 新邏輯：
+  - 預設「一定顯示」
+  - 只有在你未來加 JS 時才啟用動畫
+*/
+
+/* 預設狀態：可見 */
+.animated-fadein {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 當你未來真的加 JS 時才會用到 */
+.animated-fadein.is-animating {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.animated-fadein.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* ===============================
+   Hero 文字載入動畫（只影響首頁）
+   =============================== */
+@keyframes fadeInSlideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadein-delay-1 {
+    opacity: 0;
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+.animate-fadein-delay-2 {
+    opacity: 0;
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+    animation-delay: 0.4s;
+}
+.animate-fadein-delay-3 {
+    opacity: 0;
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+    animation-delay: 0.6s;
+}
+
+/* ===============================
+   作品集圖片 hover 效果
+   =============================== */
+.project-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image-wrapper img {
+    transition: transform 0.5s ease, filter 0.5s ease;
+    filter: brightness(0.9);
+}
+
+.project-image-wrapper:hover img {
+    transform: scale(1.05);
+    filter: brightness(1);
+}

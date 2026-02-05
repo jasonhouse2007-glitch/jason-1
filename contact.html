@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 網頁標題應為聯絡方式相關 -->
+    <title>聯絡方式 | [傑丞建築機構]</title>
+    <!-- 引入 Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入客製化 CSS 檔案 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- UI/UX 優化：引入 Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800 antialiased font-sans pt-24">
+
+    <!-- 導覽列 (Navbar) -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-gray-900 hover:text-gray-700 transition duration-300">
+                [傑丞建築機構]
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-gray-900 transition duration-300">首頁</a>
+                <a href="about.html" class="text-gray-600 hover:text-gray-900 transition duration-300">關於我</a>
+                <a href="portfolio.html" class="text-gray-600 hover:text-gray-900 transition duration-300">作品集</a>
+                <!-- 優化：當前頁面高亮顯示 -->
+                <a href="contact.html" class="text-gray-900 font-semibold border-b-2 border-gray-900 transition duration-300">聯絡方式</a>
+            </div>
+            <!-- ... 手機版選單 ... -->
+        </nav>
+        <!-- ... 手機版導覽選單 ... -->
+    </header>
+
+    <!-- 區塊4: 聯絡方式 (Contact Section) -->
+    <section id="contact" class="container mx-auto px-6 py-20 lg:py-24 animated-fadein opacity-100">
+        <div class="text-center">
+            <h2 class="font-monospace text-4xl font-light mb-4 text-gray-900">聯絡我</h2>
+            <div class="h-1 w-16 bg-gray-900 mb-8 mx-auto"></div> <!-- 分隔線 -->
+            <p class="text-lg text-gray-600 mb-8">
+                歡迎討論新的合作機會或任何設計相關的諮詢。
+            </p>
+        </div>
+
+        <!-- 聯絡表單 (新增) -->
+        <div class="max-w-xl mx-auto mt-10 p-8 bg-gray-50 rounded shadow-lg">
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">姓名</label>
+                    <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-gray-900 focus:border-gray-900">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">電子郵件</label>
+                    <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-gray-900 focus:border-gray-900">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700">訊息內容</label>
+                    <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-gray-900 focus:border-gray-900"></textarea>
+                </div>
+                <button type="submit" class="w-full px-6 py-3 border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition duration-300 cta-button">
+                    送出訊息
+                </button>
+            </form>
+        </div>
+
+        <!-- 聯絡資訊連結 (優化排版) -->
+        <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-10 mt-12">
+            <!-- Email 連結 -->
+            <a href="mailto:your.email@example.com" class="text-gray-700 hover:text-gray-900 transition duration-300 flex items-center">
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 4v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7"></path>
+                </svg>
+                your.email@example.com
+            </a>
+            <!-- Facebook 連結 -->
+            <a href="https://facebook.com/your_page" target="_blank" class="text-gray-700 hover:text-gray-900 transition duration-300 flex items-center">
+                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 11a1 1 0 011 1v2h2l-1 4h-4v7H8v-7H5v-4h3v-2a4 4 0 014-4h2v4z"></path>
+                </svg>
+                Facebook 個人頁面
+            </a>
+        </div>
+        <!-- 新增電話與地址資訊 -->
+        <div class="text-center mt-8 space-y-2 text-gray-600">
+            <p>電話：(02) XXXX-XXXX</p>
+            <p>地址：台北市信義區忠孝東路一段1號</p>
+        </div>
+    </section>
+
+    <!-- 頁尾 (Footer) -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center text-sm">
+            &copy; 2024 [傑丞建築機構]. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript 程式碼 -->
+    <script>
+        // ... JavaScript 內容 ...
+    </script>
+
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.animated-fadein').forEach(el => {
+    el.classList.add('is-animating');
+    observer.observe(el);
+  });
+});
+</script>
+
+</html>
